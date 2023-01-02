@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Convolutive Audio Source Separation using Robust ICA and Reduced Likelihood Ratio Jump</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i%7CRoboto:500"
+      rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  </head>
+  <body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+      <header class="site-header">
+        <div class="container">
+          <div class="site-header-inner">
+            <div class="brand header-brand">
+              <h1 class="m-0"> <a href="#"> <br>
+                </a> </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="hero text-center">
+          <div class="container-sm">
+            <div class="hero-inner">
+              <h1 class="hero-title h2-mobile mt-0 is-revealing">Convolutive Audio Source Separation using 
+              Robust ICA and Reduced Likelihood Ratio Jump</h1>
+              <p class="hero-paragraph is-revealing"><span style="font-family: Calibri;">Dimitrios Mallis, Thomas Sgouros and Nikolaos Mitianoudis
+              </span></p>
+              <div style="text-align: center;"><span style="font-family: Calibri;">Department
+                  of Electrical and Computer Engineering, </span><br>
+                <span style="font-family: Calibri;">Democritus University of
+                  Thrace,</span><br>
+                <span style="font-family: Calibri;"> 67100, Xanthi Greece </span><br>
+                <span style="font-family: Calibri;"></span></div>
+              <span style="font-family: Calibri;"><a href="mailto:malldimi1@gmail.com">malldimi1@gmail.com</a>,
+                <a href="mailto:tsgouros@ee.duth.gr">tsgouros@ee.duth.gr</a>,
+                <a href="mailto:nmitiano@ee.duth.gr">nmitiano@ee.duth.gr</a></span></div>
+            <div class="hero-inner"><span style="font-family: Calibri;"><br>
+              </span></div>
+            <div class="hero-inner">
+              <div style="text-align: center;">
+                <h3><span style="font-family: Calibri;" class="feature">Abstract<br>
+                  </span></h3>
+              </div>
+              <div style="text-align: justify;"><span style="font-family: Calibri;"
+
+                  class="feature">Audio source separation is the task of isolating sound sources that are active simultaneously in a room captured by a set of microphones. Con- volutive audio source separation of equal number of sources and microphones has a number of shortcomings including the complexity of frequency-domain ICA, the permutation ambiguity and the problem’s scalabity with increasing number of sensors. In this paper, the authors propose a multiple-microphone audio source separation algorithm based on a previous work of Mitianoudis and Davies <a href="#ref1">[1]</a>. Complex FastICA is substituted by Robust ICA increasing ro- bustness and performance. Permutation ambiguity is solved using two method- ologies. The first is using the Likelihood Ration Jump solution, which is now modified to decrease computational complexity in the case of multiple micro- phones. The application of the MuSIC algorithm, as a preprocessing step to the previous solution, forms a second methodology with promising results. <br>
+                </span></div>
+              <div style="text-align: justify;"><span style="font-family: Calibri;"
+
+                  class="feature"><br>
+                </span></div>
+              <div style="text-align: justify;"><span style="font-family: Calibri;"
+
+                  class="feature"><br>
+                </span></div>
+            <div class="hero-inner" style="margin-left: 9px;">
+              <h2>Audio Samples </h2>
+              <p style="text-align: left;"><strong><u>Example 1</u></strong>:</p>
+              <br>
+              <table style="width: 970px; height: 204px; margin-left: -66px;" border="0">
+                <tbody>
+                  <tr>
+                    <td style="margin-left: -36px; text-align: left;">Mixture:&nbsp;&nbsp;<audio
+
+                        src="samples/sample1/mixing.wav" preload="none" controls="controls"></audio></td>
+                    <td style="text-align: left;">Source 1: &nbsp;&nbsp;<audio src="samples/sample1/source1.wav"
+                        preload="none" controls="controls"></audio></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;"></td>
+                    <td style="text-align: left;">Source 2:&nbsp;&nbsp;<audio src="samples/sample1/source2.wav" preload="none"
+
+                        controls="controls"></audio></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;"></td>
+                    <td style="text-align: left;">Source 3: &nbsp;&nbsp;<audio src="samples/sample1/source2.wav"
+
+                        preload="none" controls="controls"></audio></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p style="text-align: left;"><strong><u>Example 2</u></strong>:</p>
+              <br>
+              <table style="width: 970px; height: 204px; margin-left: -66px;" border="0">
+                <tbody>
+                  <tr>
+                    <td style="margin-left: -36px; text-align: left;">Mixture:&nbsp;&nbsp;<audio src="samples/sample2/mixing.wav" preload="none" controls="controls"></audio></td>
+                    <td style="text-align: left;">Source 1: &nbsp;&nbsp;<audio src="samples/sample2/source1.wav" preload="none" controls="controls"></audio></t>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;"></td>
+                    <td style="text-align: left;">Source 2:&nbsp;&nbsp;<audio src="samples/sample2/source2.wav" preload="none" controls="controls"></audio></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;"></td>
+                    <td style="text-align: left;">Source 3: &nbsp;&nbsp;<audio src="samples/sample2/source3.wav" preload="none" controls="controls"></audio></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;"></td>
+                    <td style="text-align: left;">Source 4: &nbsp;&nbsp;<audio src="samples/sample2/source4.wav" preload="none" controls="controls"></audio></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="hero-inner">
+              <div style="text-align: center;">
+                <h3 id="ref1"><span style="font-family: Calibri;" class="feature">References<br>
+                  </span></h3>
+              </div>
+              <div style="text-align: justify;"><span style="font-family: Calibri;"
+
+                  class="feature">[1] Mitianoudis, N., Davies, M.: Audio source separation of convolutive mixtures. IEEE Trans. on Speech and Audio Processing 11 (5) (Sep 2003) 489–497 <br>
+                </span></div>
+          </div>
+        </section>
+        &nbsp; <br>
+        <section class="newsletter section">
+          <div class="container-sm">
+            <div class="newsletter-inner section-inner"></div>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer text-light">
+        <div class="container">
+          <div class="site-footer-inner">
+            <div class="brand footer-brand"> <a href="#">
+                <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <title>Ava</title>
+                  <defs>
+                    <path d="M32 16H16v16H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h28a2 2 0 0 1 2 2v14z"
+
+                      id="logo-gradient-footer-a"></path>
+                    <linearGradient x1="50%" y1="50%" y2="100%" id="logo-gradient-footer-b">
+                      <stop stop-color="#FFF" stop-opacity="0" offset="0%"></stop>
+                      <stop stop-color="#FFF" offset="100%"></stop> </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="evenodd">
+                    <mask id="logo-gradient-footer-c" fill="#fff">
+                      <use xlink:href="#logo-gradient-footer-a"></use> </mask>
+                    <use fill-opacity=".32" fill="#FFF" xlink:href="#logo-gradient-footer-a"></use>
+                    <path fill="url(#logo-gradient-footer-b)" mask="url(#logo-gradient-footer-c)"
+
+                      d="M-16-16h32v32h-32z"></path> </g> </svg> </a> </div>
+            <ul class="footer-social-links list-reset">
+              <li> <a href="#"> <span class="screen-reader-text">Facebook</span>&nbsp;
+                  </a> </li>
+              <li> <a href="#"> <span class="screen-reader-text">Twitter</span>&nbsp;<svg
+
+                    width="16" height="16" xmlns="http://www.w3.org/2000/svg"> </svg>
+                </a> </li>
+              <li> <a href="#"> <span class="screen-reader-text">Google</span>&nbsp;
+                  </a> </li>
+            </ul>
+            <div class="footer-copyright">© 2018 Ava, all rights reserved</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="dist/js/main.min.js"></script>
+    
+  </body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>
