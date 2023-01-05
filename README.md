@@ -9,7 +9,7 @@ The paper is available from [here](https://ieeexplore.ieee.org/document/9947051)
 
 ## Instructions
 
-Go to Code folder to access the matlab code for the directional source counting framework.
+Go to the [Code](https://github.com/tsgouros09/DFCM/tree/master/Code) folder to access the matlab code for the directional source counting framework.
 
 The core files include the following functions:
 
